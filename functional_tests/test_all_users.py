@@ -11,9 +11,9 @@ from django.utils.translation import activate
 class HomeNewVisitorTest(StaticLiveServerTestCase):
     
     def setUp(self):
-        activate('en')
         self.browser = webdriver.Firefox()
         self.browser.implicitly_wait(3)
+        activate('en')
 
     def tearDown(self):
         self.browser.quit()
